@@ -196,7 +196,7 @@
             const visitorCity = visitorTimezone.split('/').pop().replace('_', ' ');
             const visitorOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
             const visitorTime = new Intl.DateTimeFormat('en-US', visitorOptions).format(new Date());
-            document.getElementById('location-data').textContent = `You seem to be visiting this page from ${visitorCity} (${visitorTime}).`;
+            document.getElementById('location-data').textContent = `You seem to be visiting this page from ${visitorCity}, and it's currently (${visitorTime}).`;
         } catch (e) {
             document.getElementById('location-data').textContent = "Thanks for visiting.";
         }
